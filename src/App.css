@@ -1,32 +1,178 @@
 .App {
   text-align: center;
+  background-color: rgb(240, 240, 240);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+header {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  /* margin-bottom: 20px; */
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); */
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img {
+  height: 150px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.favoritesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.favoriteArticle {
+  /* height: 100px; */
+  /* width: 25%; */
+  position: relative;
+  margin: 20px;
+  background-color: rgba(70, 89, 255, 0.192);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.205);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  align-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.favoriteImage {
+  height: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete {
+  outline: none;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.562);
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.delete:hover {
+  background-color: rgba(255, 0, 0, 0.877);
+}
+
+.update {
+  width: 150px;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgba(240, 240, 240);
+  font-size: 16px;
+}
+
+.update:hover {
+  background-color: rgba(230, 230, 230);
+}
+
+.sourceHeader {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  margin: 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 25px;
+}
+
+.sourceContainer {
+  height: 100px;
+  position: absolute;
+  /* bottom: 5px; */
+  margin-left: 10%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.cnnImage {
+  height: 85px;
+  width: 125px;
+  background-image: url("./CNN-logo.png");
+  background-size: cover;
+}
+
+.bbcImage {
+  height: 60px;
+  width: 125px;
+  background-image: url("./BBC.jpg");
+  background-size: cover;
+}
+
+.espnImage {
+  height: 50px;
+  width: 125px;
+  margin-left: 20px;
+  background-image: url("./ESPN-Logo.png");
+  background-size: cover;
+}
+
+.newsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  background-color: rgb(240, 240, 240);
+}
+
+.articleContainer {
+  height: 325px;
+  padding: 5px;
+  margin: 10px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  border: 1px solid rgba(0, 0, 0, 0.219);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background-color: white;
+}
+
+.articleContainerButtons {
+  width: 250px;
+  height: 25px;
+  margin: 3px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: rgba(70, 89, 255, 0.192);
+  outline: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.articleContainerButtons:hover {
+  background-color: rgba(70, 89, 255, 0.404);
+}
+
+.bbcLogo {
+  height: 50px;
+  width: 100px;
+  background-image: url("./BBC.jpg");
+  background-size: cover;
+}
+
+.articleContainer:active {
+  background-color: gray;
 }
