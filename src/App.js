@@ -4,7 +4,6 @@ import "./App.css";
 
 import BBC from "./components/BBC";
 import ESPN from "./components/ESPN";
-// import GetCNN from "./components/GetCNN";
 import CNN from "./components/CNN";
 
 class App extends Component {
@@ -22,7 +21,6 @@ class App extends Component {
 
     this.getFavorites = this.getFavorites.bind(this);
     this.postFavorite = this.postFavorite.bind(this);
-    this.selectArticle = this.selectArticle.bind(this);
 
     this.getBBC = this.getBBC.bind(this);
     this.getESPN = this.getESPN.bind(this);
@@ -61,29 +59,6 @@ class App extends Component {
     // console.log(this.state.favoritesList);
     axios.post("/api/favorites", { article }).then(res => {
       // console.log(res.data);
-      this.setState({
-        favoritesList: res.data
-      });
-    });
-  }
-
-  selectArticle(title, urlToImage, url) {
-    this.setState({
-      selectedArticle: urlToImage,
-      selectedTitle: title,
-      selectedUrl: url
-    });
-  }
-
-  updateFavorite(id) {
-    console.log("selected article", this.state.selectedArticle);
-    const updatedArticle = {
-      urlToImage: this.state.selectedArticle,
-      title: this.state.selectedTitle,
-      url: this.state.selectedUrl
-    };
-    axios.put(`/api/favorites/${id}`, updatedArticle).then(res => {
-      // console.log("res.data", res.data);
       this.setState({
         favoritesList: res.data
       });
@@ -158,10 +133,6 @@ class App extends Component {
       : this.getCNN();
   }
 
-  // toggleHeader() {
-  //   this.state.favoritesList.length ? <header style="height:350px" /> : null;
-  // }
-
   render() {
     const { favoritesList, articleBBC, articleEspn, articleCNN } = this.state;
 
@@ -178,12 +149,7 @@ class App extends Component {
             >
               X
             </button>
-            <button
-              className="update"
-              onClick={() => this.updateFavorite(art.id)}
-            >
-              Update Article
-            </button>
+            <h4>{art.title}</h4>
           </div>
         </span>
       );
@@ -228,7 +194,7 @@ class App extends Component {
     return (
       <div className="App">
         <header
-          style={{ height: this.state.favoritesList.length ? "350px" : false }}
+          style={{ height: this.state.favoritesList.length ? "300px" : false }}
         >
           <div className="favoritesContainer">{myFavorites}</div>
         </header>

@@ -18,14 +18,6 @@ export default function displayCNN(props) {
       >
         Add To Read Later
       </button>
-      <button
-        className="articleContainerButtons"
-        onClick={() =>
-          props.selectArticle(props.title, props.urlToImage, props.url)
-        }
-      >
-        Select Article For Update
-      </button>
     </div>
   );
 }

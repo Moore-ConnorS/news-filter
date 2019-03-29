@@ -17,12 +17,6 @@ export default function bbcDisplay(props) {
       >
         Add To Read Later
       </button>
-      <button
-        className="articleContainerButtons"
-        onClick={() => props.selectArticle(title, urlToImage, url)}
-      >
-        Select Article For Update
-      </button>
     </div>
   );
 }
