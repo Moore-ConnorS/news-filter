@@ -29,8 +29,6 @@ class App extends Component {
     this.selectBBC = this.selectBBC.bind(this);
     this.selectESPN = this.selectESPN.bind(this);
     this.selectCNN = this.selectCNN.bind(this);
-
-    // this.toggleHeader = this.toggleHeader.bind(this);
   }
 
   componentDidMount() {

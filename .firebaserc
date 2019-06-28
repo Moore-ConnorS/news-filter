@@ -1,1 +1,5 @@
-{}
+{
+  "projects": {
+    "default": "yournews-9ec7e"
+  }
+}
